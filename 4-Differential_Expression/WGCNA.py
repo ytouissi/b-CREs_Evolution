@@ -176,9 +176,9 @@ print(f"Total modules: {df['Modules'].nunique()}")
 
 # Define gene list files and their names
 gene_lists = {
-    'shared': 'shared_significant.txt',
-    'fetal': 'fetal_significant.txt',
-    'adult': 'adult_all_significant.txt'
+    'shared': 'shared_HPS-bCREs.txt',
+    'fetal': 'fetal_HPS-bCREs.txt',
+    'adult': 'adult_all_HPS-bCREs.txt'
 }
 
 # Process each gene list

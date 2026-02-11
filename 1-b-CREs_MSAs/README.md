@@ -41,7 +41,7 @@ conda install -c bioconda clipkit
 
 ## Get UCSC Browser API Key
 
-1. [Sign up for UCSC account](https://genome.ucsc.edu/cgi-bin/hgLogin?hgLogin.do.signupPage=1) or [log in](https://genome.ucsc.edu/cgi-bin/hgLogin)
+1. [Sign up for UCSC account](https://genome.ucsc.edu/cgi-bin/hgLogin?hgLogin.do.signupPage=1) or [log in](https://genome.ucsc.edu/cgi-bin/hgLogin?hgLogin.do.displayLoginPage=1)
 2. Go to [Track Data Hubs](https://genome.ucsc.edu/cgi-bin/hgHubConnect#hubDeveloper)
 3. Click on "Hub Development" section at the bottom
 4. Your API key is displayed there
@@ -67,7 +67,7 @@ Replace:
 ## Run the Pipeline
 
 ```bash
-bash run_pipeline.sh
+bash Get_MSAs.sh
 ```
 
 The script runs all extraction, cleaning, trimming, and analysis steps automatically. When complete:
@@ -91,27 +91,4 @@ The pipeline automates the following workflow:
 10. Selects the best version of each region (most species)
 11. Generates a report
 
-For detailed explanations of each step, see [WORKFLOW.md](WORKFLOW.md).
-
-## Project Structure
-
-```
-Multiple_Sequence_Alignment/
-├── config.json
-├── run_pipeline.sh
-├── README.md
-├── WORKFLOW.md
-├── CREs.bed
-├── primates.txt
-├── primates_multiz.txt
-├── fa_extractor_cactus447.py
-├── fa_extractor_multiz470.py
-├── fa_extractor_ucsc30.py
-├── cleaning_fa.py
-├── clipkit.sh
-├── CountSeqs.py
-├── SelectBestMSA.py
-├── Adaptify_MSAs/
-└── Intermediate Files/
-```
-
+For detailed explanations of each step, see [WORKFLOW.md](Workflow.md).

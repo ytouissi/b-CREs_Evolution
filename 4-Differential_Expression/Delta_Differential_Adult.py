@@ -58,8 +58,8 @@ def load_data():
                     genes.add(line)
         return genes
 
-    har_genes = load_genes('shared_adult_significant.txt')
-    control_genes = load_genes('shared_adult_non_significant.txt')
+    har_genes = load_genes('shared_HPS-bCREs.txt')
+    control_genes = load_genes('shared_non_HPS-bCREs.txt')
 
     return metadata, expr_data, har_genes, control_genes
 
@@ -214,7 +214,7 @@ def main():
         pvals = [r['p_value'] for r in results_list]
         reject, pvals_adj, _, _ = multipletests(pvals, method='fdr_bh')
         for i, r in enumerate(results_list):
-            print(f"{r['comparison']} adjusted p={pvals_adj[i]:.2e}, significant={reject[i]}")
+            print(f"{r['comparison']} adjusted p={pvals_adj[i]:.2e}, HPS-bCREs={reject[i]}")
 
     # Generate all outputs with adjusted p-values
     plot_all_comparisons(results_list, pvals_adj)

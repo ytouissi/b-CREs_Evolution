@@ -40,7 +40,14 @@ if ! python3 Files_Stats.py; then
 fi
 echo "✓ Files_Stats.py completed successfully"
 echo ""
-
+# Step 5: Generate References 
+echo "[4/4] Running Generate_References.py..."
+if ! python3 Generate_References.py; then
+    echo "ERROR: Generate_References.py failed to run"
+    exit 1
+fi
+echo "✓ Generate_References.py completed successfully"
+echo ""
 echo "=========================================="
 echo "Pipeline completed successfully!"
 echo "=========================================="

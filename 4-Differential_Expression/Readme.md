@@ -11,14 +11,14 @@ Following branch-specific positive selection detection (HyPhy), these analyses c
 Excel/Data files (same directory as scripts):
 - `aat8077_tabless1s3.xlsx` - Developmental metadata from Zhu et al. (2018) supplementary materials
 - `adult_data_filtered.csv` - Adult stage expression data
+- `dev_data_filtered.csv` - Developmental stage expression data
 - `Genes breakpoint.xlsx` - Developmental breakpoint scores with metadata (Bakken et al. 2016)
 - `Gene Modules.xlsx` - WGCNA co-expression module assignments with gene IDs and metadata (Sousa et al. 2017)
 
 Gene lists (one gene ID per line):
-- `shared_significant.txt`, `shared_non_significant.txt` - All stages
-- `fetal_significant.txt`, `fetal_non_significant.txt` - Fetal stage
-- `adult_all_significant.txt`, `adult_all_non_significant.txt` - Adult stage
-- `shared_adult_significant.txt`, `shared_adult_non_significant.txt` - Adult stage (alternative)
+- `shared_HPS-bCREs.txt`, `shared_non_HPS-bCREs.txt` - Genes regulated by Shared b-CREs
+- `fetal_HPS-bCREs.txt`, `fetal_non_HPS-bCREs.txt` - Genes regulated by Fetal b-CREs
+- `adult_all_HPS-bCREs.txt`, `adult_all_non_HPS-bCREs.txt` -Genes regulated by Adult b-CREs
 
 ## Analyses
 
@@ -27,7 +27,7 @@ Gene lists (one gene ID per line):
 
 Calculates Δ Z-score (human minus macaque/chimpanzee expression Z-scores) across developmental time points. Tests if HPS-regulated genes show different expression patterns than controls (Mann-Whitney U test, FDR 5%).
 
-**Input:** `aat8077_tabless1s3.xlsx`, gene lists
+**Input:** `aat8077_tabless1s3.xlsx`, gene lists, `dev_data_filtered.csv`
 
 **Output:** Density plots, statistical results
 
@@ -36,7 +36,7 @@ Calculates Δ Z-score (human minus macaque/chimpanzee expression Z-scores) acros
 
 Calculates log2FC for adult brains across species pairs. Compares HPS vs non-HPS gene expression distributions (Wilcoxon rank-sum test, FDR 5%).
 
-**Input:** `adult_data_filtered.csv`, gene lists
+**Input:** `aat8077_tabless1s3.xlsx`, gene lists, `adult_data_filtered.csv`
 
 **Output:** Density plots, statistical results
 

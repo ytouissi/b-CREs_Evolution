@@ -16,7 +16,7 @@ from urllib3.util.retry import Retry
 import re
 
 # Configuration - EDIT THESE SETTINGS
-BED_FILE = "1.bed"                  # Path to your BED file
+BED_FILE = "NFR.bed"                  # Path to your BED file
 OUTPUT_DIR = "Intermediate_Files/fasta"                # Directory to save FASTA files
 GENOME = "hg38"                     # Genome assembly
 TRACK = "cactus447way"              # Alignment track

@@ -125,8 +125,8 @@ def load_data():
             print("Please make sure all data files are in the same folder as the script.")
             return None
 
-    fetal_har_genes = load_genes('shared_fetal_significant.txt')
-    control_genes = load_genes('shared_fetal_non_significant.txt')
+    fetal_har_genes = load_genes('shared_HPS-bCREs.txt')
+    control_genes = load_genes('shared_non_HPS-bCREs.txt')
 
     if fetal_har_genes is None or control_genes is None:
         return None, None, None, None, None
@@ -305,8 +305,8 @@ def analyze_fetal_periods(metadata, expr_data, fetal_har_genes, control_genes):
         print(f"\nMultiple testing correction (FDR):")
         for i, period in enumerate(periods_list):
             results[period]['p_fdr'] = p_adj_fdr[i]
-            results[period]['significant_fdr'] = rejected_fdr[i]
-            print(f"Period {period}: p_raw = {p_values[i]:.2e}, p_fdr = {p_adj_fdr[i]:.2e}, significant = {rejected_fdr[i]}")
+            results[period]['HPS-bCREs_fdr'] = rejected_fdr[i]
+            print(f"Period {period}: p_raw = {p_values[i]:.2e}, p_fdr = {p_adj_fdr[i]:.2e}, HPS-bCREs = {rejected_fdr[i]}")
     
     return results
 

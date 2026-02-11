@@ -65,8 +65,8 @@ def load_data():
             print("Please make sure all data files are in the same folder as the script.")
             return None
 
-    fetal_har_genes = load_genes('fetal_significant.txt')
-    fetal_control_genes = load_genes('fetal_non_significant.txt')
+    fetal_har_genes = load_genes('fetal_HPS-bCREs.txt')
+    fetal_control_genes = load_genes('fetal_non_HPS-bCREs.txt')
 
     if fetal_har_genes is None or fetal_control_genes is None:
         return None, None, None, None, None
@@ -76,8 +76,8 @@ def load_data():
     
     # Load gene lists for SHARED FETAL
     print(f"\nLoading SHARED FETAL gene lists...")
-    shared_har_genes = load_genes('shared_fetal_significant.txt')
-    shared_control_genes = load_genes('shared_fetal_non_significant.txt')
+    shared_har_genes = load_genes('shared_HPS-bCREs.txt')
+    shared_control_genes = load_genes('shared_non_HPS-bCREs.txt')
 
     if shared_har_genes is None or shared_control_genes is None:
         return None, None, None, None, None
@@ -482,13 +482,13 @@ def main():
         print("\nFETAL b-CREs:")
         print(f"  Data: {result_fetal['har_count']} HAR gene-regions, {result_fetal['nhar_count']} non-HAR gene-regions")
         print(f"  p-value: {result_fetal['primary_p']:.2e}")
-        significance = "SIGNIFICANT" if result_fetal['primary_p'] < 0.05 else "NOT SIGNIFICANT"
+        significance = "HPS-bCREs" if result_fetal['primary_p'] < 0.05 else "NOT HPS-bCREs"
         print(f"  Result: {significance}")
         
         print("\nSHARED (FETAL) b-CREs:")
         print(f"  Data: {result_shared['har_count']} HAR gene-regions, {result_shared['nhar_count']} non-HAR gene-regions")
         print(f"  p-value: {result_shared['primary_p']:.2e}")
-        significance = "SIGNIFICANT" if result_shared['primary_p'] < 0.05 else "NOT SIGNIFICANT"
+        significance = "HPS-bCREs" if result_shared['primary_p'] < 0.05 else "NOT HPS-bCREs"
         print(f"  Result: {significance}")
     
     print(f"\nAnalysis complete!")

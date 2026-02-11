@@ -17,7 +17,7 @@ The original NFR coordinates were lifted over to human hg38 assembly (GRCh38) us
 
 ## Automated Workflow
 
-All steps are automated via `bioinformatics_pipeline.sh`:
+All steps are automated via `Neutral_MSAs.sh`:
 
 ### Step 1: Extract_Neutral_Bases.py
 Extracts MSAs from hg38 NFR coordinates. Produces raw FASTA files containing sequences for each NFR region.
@@ -31,16 +31,29 @@ Trims alignment positions using ClipKIT (kpi-gappy mode). Removes gappy and non-
 ### Step 4: Files_Stats.py
 Generates summary statistics (sequence count, alignment length) for all processed alignments. Outputs results to Excel format for downstream analysis.
 
+### Step 5: Generate_References.py
+
+Creates concatenated neutral reference alignments by combining multiple NFR sequences horizontally. For each query alignment from the CREs pipeline, this script:
+
+Finds suitable NFR reference files that contain all the same species
+Concatenates reference files to reach ~3000 bp target alignment length
+Produces neutral reference MSAs matched to the same species composition as the query
+
+These neutral references serve as proxy alignments representing evolution under no selection, enabling statistical comparison with CRE alignments in positive selection tests.
+Output: Reference alignments saved with summary statistics in reference_summary.xlsx
+
 ## Usage
 
 ```bash
-./bioinformatics_pipeline.sh
+./Neutral_MSAs.sh
 ```
 
 ## Output
 
-- **Cleaned MSA files** (trimmed and ready for analysis)
-- **alignment_statistics.xlsx** (sequence counts and lengths needed for next step)
+- **Neutral Folder** (trimmed and ready neutral MSAs for analysis)
+- **Neutral_Stats.xlsx** (sequence counts and lengths needed for next step)
+- **References Folder** (concatenated neutral reference alignments paired with CREs)
+- **reference_summary.xlsx** (reference construction details and statistics)
 
 ## References
 

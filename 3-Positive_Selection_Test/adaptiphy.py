@@ -16,8 +16,8 @@ import logging
 import math
 
 # Configuration
-QUERY_DIR = "Queries"
-REF_DIR = "References"
+QUERY_DIR = "../1-b-CREs_MSAs/Adaptify_MSAs" # Path of the folder containing b-CREs multiple sequence alignement
+REF_DIR = "../2-Neutral_MSAs/References" # Path of the folder containing neutral multiple sequence alignement
 MASTER_TREE_FILE = "243Primates_Tree.nwk"
 
 # Define foreground branches
