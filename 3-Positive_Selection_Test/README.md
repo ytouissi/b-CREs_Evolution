@@ -2,6 +2,10 @@
 
 Detects branch-specific positive selection in b-CRE regions using adaptiPhy likelihood ratio tests.
 
+Please Cite : 
+
+Berrio, A., Haygood, R. & Wray, G.A. (2020). Identifying branch-specific positive selection throughout the regulatory genome using an appropriate proxy neutral. BMC Genomics, 21, 359. https://doi.org/10.1186/s12864-020-6752-4
+
 ## Overview
 
 This script performs branch-specific positive selection testing on query b-CREs against neutral reference alignments. It tests for positive selection on human lineage and great ape clade branches using phylogenetic models.
