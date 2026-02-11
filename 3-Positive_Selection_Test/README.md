@@ -35,8 +35,10 @@ python3 adaptiPhy.py
 
 ## Requirements
 
-- Python 3.x with BioPython, pandas, scipy, ete3
-- adaptiPhy installed and accessible from PATH
+
+```bash
+pip install biopython pandas scipy ete3
+```
 
 ## Next Step
 
