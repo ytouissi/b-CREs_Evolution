@@ -26,7 +26,9 @@ The AdaptiPhy pipeline identifies human-lineage positive selection by testing B-
 
 
 This pipeline uses AdaptiPhy (https://github.com/wodanaz/adaptiPhy). 
+
 Please cite: 
+
 Berrio, A., Haygood, R. & Wray, G.A. Identifying branch-specific positive selection throughout the regulatory genome using an appropriate proxy neutral. BMC Genomics 21, 359 (2020). https://doi.org/10.1186/s12864-020-6752-4
 
 ---
