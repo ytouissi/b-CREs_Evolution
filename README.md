@@ -13,16 +13,12 @@ Automated workflow to extract and optimize sequence alignments for cis-regulator
 - selects the best alignment for each region based on sequence coverage
 - Cleans, trims, and optimizes alignments for phylogenetic analysis
 
-See [1-b-CREs_MSAs/README.md] for complete instructions.
-
 ---
 
 ### 2. Neutral MSAs
 
 An automated pipeline extracts and optimizes non-functional sequence alignments to provide neutral proxies for positive selection analysis.
 
-
-See [2-Neutral_MSAs/README.md] for complete instructions.
 ---
 
 ### 3. Positive Selection Test
@@ -33,14 +29,11 @@ This pipeline uses AdaptiPhy (https://github.com/wodanaz/adaptiPhy).
 Please cite: 
 Berrio, A., Haygood, R. & Wray, G.A. Identifying branch-specific positive selection throughout the regulatory genome using an appropriate proxy neutral. BMC Genomics 21, 359 (2020). https://doi.org/10.1186/s12864-020-6752-4
 
-
-See [3-Positive_Selection_Test/README.md] for complete instructions.
-
 ---
 
 ### 4. Differential Expression
 
-This pipeline analyzes differential gene expression between genes regulated by positive selection b-CREs and those without positive selection across humans, macaques, and chimpanzees. Complete instructions are available in [4-Differential_Expression/README.md].
+This pipeline analyzes differential gene expression between genes regulated by positive selection b-CREs and those without positive selection across humans, macaques, and chimpanzees. Complete instructions are available 
 
 ## Getting Started
 
