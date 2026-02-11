@@ -1,6 +1,6 @@
-# Adaptive Selection Analysis (HyPhy)
+# Positive Selection Analysis (adaptiPhy)
 
-Detects branch-specific positive selection in b-CRE regions using HyPhy likelihood ratio tests.
+Detects branch-specific positive selection in b-CRE regions using adaptiPhy likelihood ratio tests.
 
 ## Overview
 
@@ -11,13 +11,13 @@ This script performs branch-specific positive selection testing on query b-CREs 
 - **Queries/** folder - Quality b-CRE MSA files from Step 1
 - **References/** folder - Concatenated neutral MSAs from Step 3
 - **243Primates_Tree.nwk** - Master phylogenetic tree (same directory)
-- **null4-fgrnd_spec.bf** - HyPhy null model template (same directory)
-- **alt4-fgrnd_spec.bf** - HyPhy alternative model template (same directory)
+- **null4-fgrnd_spec.bf** - adaptiPhy null model template (same directory)
+- **alt4-fgrnd_spec.bf** - adaptiPhy alternative model template (same directory)
 
 ## Workflow
 
 1. Prunes master tree to match query-reference species
-2. Runs HyPhy null and alternative models for human and great ape branches
+2. Runs adaptiPhy null and alternative models for human and great ape branches
 3. Calculates likelihood ratio tests (LRT) and p-values
 4. Outputs results with significance calls
 
@@ -30,13 +30,13 @@ This script performs branch-specific positive selection testing on query b-CREs 
 ## Usage
 
 ```bash
-python3 hyphy.py
+python3 adaptiPhy.py
 ```
 
 ## Requirements
 
 - Python 3.x with BioPython, pandas, scipy, ete3
-- HyPhy installed and accessible from PATH
+- adaptiPhy installed and accessible from PATH
 
 ## Next Step
 
