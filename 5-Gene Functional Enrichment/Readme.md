@@ -4,7 +4,7 @@
 
 This script performs a term-specific permutation sanity check for Over-Representation Analysis (ORA) using g:Profiler. It evaluates whether enrichment terms found in genes regulated by Human Selected Regions (b-CREs) are statistically robust or likely to appear by chance.
 
-**Table S7** contains the enrichment terms enriched in genes regulated by Human Selected Regions (b-CREs) — across three stages: Adult, Fetal, and Shared. The script uses these terms as targets and tests how often they appear in random permutations of the same size.
+**Table S7** contains the enrichment terms enriched in genes regulated by Human Selected Regions (b-CREs) across three stages: Adult, Fetal, and Shared. The script uses these terms as targets and tests how often they appear in random permutations of the same size.
 
 ---
 
